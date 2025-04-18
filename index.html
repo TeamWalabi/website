@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALABI - Wageningen Lab for Agri-Food Business Informatics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>WALABI</h1>
+                    <h2>Wageningen Lab for Agri-Food Business Informatics</h2>
+                    <p>Driving innovation through business informatics in the agriculture and food industry</p>
+                    <div class="language-switch">
+                        <button class="active" onclick="switchLanguage('en')">EN</button>
+                        <button onclick="switchLanguage('nl')">NL</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about" id="about-section">
+            <div class="container">
+                <h2 class="section-title">About WALABI</h2>
+                <div class="about-content">
+                    <div class="about-text" id="about-text-en">
+                        <p>WALABI is the research lab of Wageningen University on business informatics in the agriculture and food industry. We firmly believe that digital innovations in the agri-food domain are not objectives in themselves, but means to enhance sustainability and to deliver value to the end users.</p>
+                        <p>WALABI strives to achieve this through impactful, collaborative and rigorous research in business informatics. As an interdisciplinary engineering discipline, business informatics systematically analyzes, designs, and applies information systems in business contexts—drawing from a deep organizational understanding and leveraging insights from business sciences such as logistics, business economics, marketing and management studies.</p>
+                        <p>WALABI serves as a bridge between domain-specific and technical disciplines, equipping our clients with the knowledge and competences for making impact with data and digital technologies. We translate key concepts from various business disciplines into new information designs that enable innovative practical applications from farm to fork. Through this holistic, business-driven engineering approach, we drive innovations that embed sustainability in the lifeblood of agri-food organizations by leveraging data and digital technologies.</p>
+                        <p>More information: <a href="https://www.walabi.eu" target="_blank">www.walabi.eu</a></p>
+                    </div>
+                    <div class="about-text hidden" id="about-text-nl">
+                        <p>WALABI is het onderzoekslaboratorium van Wageningen Universiteit op het gebied van bedrijfsinformatica in de landbouw- en voedselindustrie. Wij zijn ervan overtuigd dat digitale innovaties in het agri-food domein geen doelen op zich zijn, maar middelen om duurzaamheid te verbeteren en waarde te leveren aan de eindgebruikers.</p>
+                        <p>WALABI streeft ernaar dit te bereiken door impactvol, samenwerkend en rigoureus onderzoek in bedrijfsinformatica. Als interdisciplinaire technische discipline analyseert, ontwerpt en past bedrijfsinformatica systematisch informatiesystemen toe in bedrijfscontexten - vanuit een diep organisatorisch begrip en gebruikmakend van inzichten uit bedrijfswetenschappen zoals logistiek, bedrijfseconomie, marketing en managementstudies.</p>
+                        <p>WALABI fungeert als een brug tussen domeinspecifieke en technische disciplines, en rust onze klanten uit met de kennis en competenties om impact te maken met data en digitale technologieën. We vertalen sleutelconcepten uit verschillende bedrijfsdisciplines naar nieuwe informatieontwerpen die innovatieve praktische toepassingen mogelijk maken van boer tot bord. Door deze holistische, bedrijfsgerichte technische benadering, stimuleren we innovaties die duurzaamheid verankeren in de levensader van agri-food organisaties door gebruik te maken van data en digitale technologieën.</p>
+                        <p>Meer informatie: <a href="https://www.walabi.eu" target="_blank">www.walabi.eu</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="themes" id="themes-section">
+            <div class="container">
+                <h2 class="section-title" id="themes-title-en">Our Themes</h2>
+                <h2 class="section-title hidden" id="themes-title-nl">Onze Thema's</h2>
+                
+                <div class="theme-grid">
+                    <div class="theme-card">
+                        <div class="theme-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 id="theme1-title-en">Business Architecture</h3>
+                        <h3 class="hidden" id="theme1-title-nl">Bedrijfsarchitectuur</h3>
+                        <p id="theme1-text-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                        <p class="hidden" id="theme1-text-nl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                    </div>
+                    
+                    <div class="theme-card">
+                        <div class="theme-icon">
+                            <i class="fas fa-digital-tachograph"></i>
+                        </div>
+                        <h3 id="theme2-title-en">Digital Transformation</h3>
+                        <h3 class="hidden" id="theme2-title-nl">Digitale Transformatie</h3>
+                        <p id="theme2-text-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                        <p class="hidden" id="theme2-text-nl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                    </div>
+                    
+                    <div class="theme-card">
+                        <div class="theme-icon">
+                            <i class="fas fa-binoculars"></i>
+                        </div>
+                        <h3 id="theme3-title-en">Digital Trends Exploration</h3>
+                        <h3 class="hidden" id="theme3-title-nl">Verkenning Digitale Trends</h3>
+                        <p id="theme3-text-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                        <p class="hidden" id="theme3-text-nl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                    </div>
+                    
+                    <div class="theme-card">
+                        <div class="theme-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 id="theme4-title-en">Interoperability and Data Sharing Infrastructures</h3>
+                        <h3 class="hidden" id="theme4-title-nl">Interoperabiliteit en Data-uitwisselingsinfrastructuren</h3>
+                        <p id="theme4-text-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                        <p class="hidden" id="theme4-text-nl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                    </div>
+                    
+                    <div class="theme-card">
+                        <div class="theme-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 id="theme5-title-en">Smart Business Information Systems</h3>
+                        <h3 class="hidden" id="theme5-title-nl">Slimme Bedrijfsinformatiesystemen</h3>
+                        <p id="theme5-text-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                        <p class="hidden" id="theme5-text-nl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="track-record" id="track-record-section">
+            <div class="container">
+                <h2 class="section-title" id="track-record-title-en">Track Record</h2>
+                <h2 class="section-title hidden" id="track-record-title-nl">Resultaten</h2>
+                
+                <div class="track-record-content">
+                    <div id="track-record-text-en">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Praesent quis lacinia tortor, et finibus arcu. Mauris vel enim vitae orci finibus malesuada et vel nisl. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                        <ul class="track-record-list">
+                            <li>Successful implementation of digital transformation strategies for agricultural cooperatives</li>
+                            <li>Development of data sharing platforms that enhance supply chain visibility</li>
+                            <li>Design of business information systems that improve operational efficiency</li>
+                            <li>Consultation on digital trends and emerging technologies in the agri-food sector</li>
+                        </ul>
+                    </div>
+                    <div class="hidden" id="track-record-text-nl">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Praesent quis lacinia tortor, et finibus arcu. Mauris vel enim vitae orci finibus malesuada et vel nisl. Nulla facilisi. Cras non magna vel orci ultrices malesuada at vel nisl. Mauris vel enim vitae orci finibus malesuada.</p>
+                        <ul class="track-record-list">
+                            <li>Succesvolle implementatie van digitale transformatiestrategieën voor landbouwcoöperaties</li>
+                            <li>Ontwikkeling van platforms voor gegevensuitwisseling die de zichtbaarheid van de toeleveringsketen verbeteren</li>
+                            <li>Ontwerp van bedrijfsinformatiesystemen die de operationele efficiëntie verbeteren</li>
+                            <li>Consultatie over digitale trends en opkomende technologieën in de agri-foodsector</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
