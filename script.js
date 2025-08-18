@@ -41,6 +41,8 @@ function setupServicesCarousel() {
     let currentIndex = 0;
     let cardsPerView = getCardsPerView();
     
+    console.log('Total services:', totalServices, 'Cards per view:', cardsPerView);
+    
     // Create dots
     function createDots() {
         dotsContainer.innerHTML = '';
@@ -68,6 +70,8 @@ function setupServicesCarousel() {
         const translateX = -currentIndex * (cardsPerView * cardWidth);
         servicesGrid.style.transform = `translateX(${translateX}px)`;
         
+        console.log('Current index:', currentIndex, 'Translate X:', translateX);
+        
         // Update dots
         const dots = dotsContainer.querySelectorAll('.dot');
         dots.forEach((dot, index) => {
@@ -75,8 +79,11 @@ function setupServicesCarousel() {
         });
         
         // Update navigation buttons
+        const maxIndex = Math.ceil(totalServices / cardsPerView) - 1;
         prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex >= Math.ceil(totalServices / cardsPerView) - 1;
+        nextBtn.disabled = currentIndex >= maxIndex;
+        
+        console.log('Max index:', maxIndex, 'Next disabled:', currentIndex >= maxIndex);
     }
     
     // Go to specific slide
@@ -87,7 +94,8 @@ function setupServicesCarousel() {
     
     // Next slide
     function nextSlide() {
-        if (currentIndex < Math.ceil(totalServices / cardsPerView) - 1) {
+        const maxIndex = Math.ceil(totalServices / cardsPerView) - 1;
+        if (currentIndex < maxIndex) {
             currentIndex++;
             updateCarousel();
         }

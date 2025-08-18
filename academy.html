@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALABI Academy - Wageningen Lab for Agri-Food Business Informatics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+    
+    <main>
+        <section class="hero academy-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>WALABI Academy</h1>
+                    <h2>Learn from the Experts</h2>
+                    <p>Discover insights, methodologies, and practical applications in agri-food business informatics through our comprehensive video library and learning materials.</p>
+                    <div class="language-switch">
+                        <button class="active" onclick="switchLanguage('en')">EN</button>
+                        <button onclick="switchLanguage('nl')">NL</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="academy-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <div class="intro-text" id="intro-text-en">
+                        <h2>Welcome to WALABI Academy</h2>
+                        <p>Our academy provides access to cutting-edge knowledge and practical insights in agri-food business informatics. Explore our curated collection of videos, presentations, and learning materials organized around our core research themes.</p>
+                        <p>Whether you're a practitioner, researcher, or student, you'll find valuable resources to enhance your understanding and application of digital technologies in the agri-food sector.</p>
+                    </div>
+                    <div class="intro-text hidden" id="intro-text-nl">
+                        <h2>Welkom bij WALABI Academy</h2>
+                        <p>Onze academy biedt toegang tot geavanceerde kennis en praktische inzichten in agri-food bedrijfsinformatica. Verken onze gecureerde collectie van video's, presentaties en leermaterialen georganiseerd rond onze kernonderzoeks thema's.</p>
+                        <p>Of u nu een praktijkbeoefenaar, onderzoeker of student bent, u vindt waardevolle bronnen om uw begrip en toepassing van digitale technologieën in de agri-food sector te verbeteren.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="academy-themes">
+            <div class="container">
+                <h2 class="section-title" id="themes-title-en">Learning Themes</h2>
+                <h2 class="section-title hidden" id="themes-title-nl">Leerthema's</h2>
+                
+                <div class="themes-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-theme="business-architecture" id="tab1-en">
+                            <i class="fas fa-building"></i>
+                            Business Architecture
+                        </button>
+                        <button class="tab-btn" data-theme="digital-transformation" id="tab2-en">
+                            <i class="fas fa-digital-tachograph"></i>
+                            Digital Transformation
+                        </button>
+                        <button class="tab-btn" data-theme="digital-trends" id="tab3-en">
+                            <i class="fas fa-binoculars"></i>
+                            Digital Trends Exploration
+                        </button>
+                        <button class="tab-btn" data-theme="interoperability" id="tab4-en">
+                            <i class="fas fa-network-wired"></i>
+                            Interoperability & Data Sharing
+                        </button>
+                        <button class="tab-btn" data-theme="smart-systems" id="tab5-en">
+                            <i class="fas fa-database"></i>
+                            Smart Business Information Systems
+                        </button>
+                    </div>
+                    
+                    <div class="tab-buttons hidden" id="tab-buttons-nl">
+                        <button class="tab-btn active" data-theme="business-architecture" id="tab1-nl">
+                            <i class="fas fa-building"></i>
+                            Bedrijfsarchitectuur
+                        </button>
+                        <button class="tab-btn" data-theme="digital-transformation" id="tab2-nl">
+                            <i class="fas fa-digital-tachograph"></i>
+                            Digitale Transformatie
+                        </button>
+                        <button class="tab-btn" data-theme="digital-trends" id="tab3-nl">
+                            <i class="fas fa-binoculars"></i>
+                            Verkenning Digitale Trends
+                        </button>
+                        <button class="tab-btn" data-theme="interoperability" id="tab4-nl">
+                            <i class="fas fa-network-wired"></i>
+                            Interoperabiliteit & Data-uitwisseling
+                        </button>
+                        <button class="tab-btn" data-theme="smart-systems" id="tab5-nl">
+                            <i class="fas fa-database"></i>
+                            Slimme Bedrijfsinformatiesystemen
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="theme-content">
+                    <!-- Business Architecture Content -->
+                    <div class="theme-panel active" id="business-architecture">
+                        <div class="theme-header">
+                            <h3 id="theme1-title-en">Business Architecture</h3>
+                            <h3 class="hidden" id="theme1-title-nl">Bedrijfsarchitectuur</h3>
+                            <p id="theme1-desc-en">Learn about designing future-proof digital infrastructures and translating architectural visions into actionable transformation roadmaps.</p>
+                            <p class="hidden" id="theme1-desc-nl">Leer over het ontwerpen van toekomstbestendige digitale infrastructuren en het vertalen van architectuurvisies naar uitvoerbare transformatieroutes.</p>
+                        </div>
+                        
+                        <div class="content-grid">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="duration">15:32</span>
+                                </div>
+                                <div class="video-info">
+                                    <h4 id="video1-title-en">Introduction to Business Architecture in Agri-Food</h4>
+                                    <h4 class="hidden" id="video1-title-nl">Inleiding tot Bedrijfsarchitectuur in Agri-Food</h4>
+                                    <p id="video1-desc-en">Learn the fundamentals of business architecture and how it applies to digital transformation in the agri-food sector.</p>
+                                    <p class="hidden" id="video1-desc-nl">Leer de fundamenten van bedrijfsarchitectuur en hoe dit van toepassing is op digitale transformatie in de agri-food sector.</p>
+                                    <div class="video-meta">
+                                        <span class="level">Beginner</span>
+                                        <span class="views">1.2k views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="resource-info">
+                                    <h4 id="resource1-title-en">Business Architecture Framework Guide</h4>
+                                    <h4 class="hidden" id="resource1-title-nl">Bedrijfsarchitectuur Framework Gids</h4>
+                                    <p id="resource1-desc-en">Comprehensive guide to implementing business architecture frameworks in agri-food organizations.</p>
+                                    <p class="hidden" id="resource1-desc-nl">Uitgebreide gids voor het implementeren van bedrijfsarchitectuur frameworks in agri-food organisaties.</p>
+                                    <a href="#" class="download-btn" id="download1-en">Download PDF</a>
+                                    <a href="#" class="download-btn hidden" id="download1-nl">Download PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Digital Transformation Content -->
+                    <div class="theme-panel" id="digital-transformation">
+                        <div class="theme-header">
+                            <h3 id="theme2-title-en">Digital Transformation</h3>
+                            <h3 class="hidden" id="theme2-title-nl">Digitale Transformatie</h3>
+                            <p id="theme2-desc-en">Explore strategies for guiding organizations through digital transformation and implementing new technologies.</p>
+                            <p class="hidden" id="theme2-desc-nl">Verken strategieën voor het begeleiden van organisaties door digitale transformatie en het implementeren van nieuwe technologieën.</p>
+                        </div>
+                        
+                        <div class="content-grid">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="duration">22:15</span>
+                                </div>
+                                <div class="video-info">
+                                    <h4 id="video2-title-en">Digital Transformation Roadmap Development</h4>
+                                    <h4 class="hidden" id="video2-title-nl">Digitale Transformatie Routekaart Ontwikkeling</h4>
+                                    <p id="video2-desc-en">Step-by-step guide to creating effective digital transformation roadmaps for agri-food organizations.</p>
+                                    <p class="hidden" id="video2-desc-nl">Stap-voor-stap gids voor het creëren van effectieve digitale transformatie routekaarten voor agri-food organisaties.</p>
+                                    <div class="video-meta">
+                                        <span class="level">Intermediate</span>
+                                        <span class="views">856 views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-powerpoint"></i>
+                                </div>
+                                <div class="resource-info">
+                                    <h4 id="resource2-title-en">Digital Transformation Case Studies</h4>
+                                    <h4 class="hidden" id="resource2-title-nl">Digitale Transformatie Casestudies</h4>
+                                    <p id="resource2-desc-en">Real-world examples of successful digital transformation in the agri-food sector.</p>
+                                    <p class="hidden" id="resource2-desc-nl">Praktijkvoorbeelden van succesvolle digitale transformatie in de agri-food sector.</p>
+                                    <a href="#" class="download-btn" id="download2-en">Download Presentation</a>
+                                    <a href="#" class="download-btn hidden" id="download2-nl">Download Presentatie</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Digital Trends Content -->
+                    <div class="theme-panel" id="digital-trends">
+                        <div class="theme-header">
+                            <h3 id="theme3-title-en">Digital Trends Exploration</h3>
+                            <h3 class="hidden" id="theme3-title-nl">Verkenning Digitale Trends</h3>
+                            <p id="theme3-desc-en">Discover emerging digital technologies and learn how to make them understandable and actionable for the agri-food sector.</p>
+                            <p class="hidden" id="theme3-desc-nl">Ontdek opkomende digitale technologieën en leer hoe je ze begrijpelijk en toepasbaar kunt maken voor de agri-food sector.</p>
+                        </div>
+                        
+                        <div class="content-grid">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="duration">18:42</span>
+                                </div>
+                                <div class="video-info">
+                                    <h4 id="video3-title-en">AI and Machine Learning in Agri-Food</h4>
+                                    <h4 class="hidden" id="video3-title-nl">AI en Machine Learning in Agri-Food</h4>
+                                    <p id="video3-desc-en">Explore the potential of artificial intelligence and machine learning in transforming agri-food systems.</p>
+                                    <p class="hidden" id="video3-desc-nl">Verken de mogelijkheden van kunstmatige intelligentie en machine learning in de transformatie van agri-food systemen.</p>
+                                    <div class="video-meta">
+                                        <span class="level">Advanced</span>
+                                        <span class="views">1.5k views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-word"></i>
+                                </div>
+                                <div class="resource-info">
+                                    <h4 id="resource3-title-en">Digital Trends Report 2024</h4>
+                                    <h4 class="hidden" id="resource3-title-nl">Digitale Trends Rapport 2024</h4>
+                                    <p id="resource3-desc-en">Comprehensive analysis of emerging digital trends and their impact on the agri-food sector.</p>
+                                    <p class="hidden" id="resource3-desc-nl">Uitgebreide analyse van opkomende digitale trends en hun impact op de agri-food sector.</p>
+                                    <a href="#" class="download-btn" id="download3-en">Download Report</a>
+                                    <a href="#" class="download-btn hidden" id="download3-nl">Download Rapport</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interoperability Content -->
+                    <div class="theme-panel" id="interoperability">
+                        <div class="theme-header">
+                            <h3 id="theme3-title-en">Interoperability & Data Sharing</h3>
+                            <h3 class="hidden" id="theme3-title-nl">Interoperabiliteit & Data-uitwisseling</h3>
+                            <p id="theme3-desc-en">Learn about building foundations for fair, secure, and transparent data collaboration in digital ecosystems.</p>
+                            <p class="hidden" id="theme3-desc-nl">Leer over het bouwen van fundamenten voor eerlijke, veilige en transparante datacollaboratie in digitale ecosystemen.</p>
+                        </div>
+                        
+                        <div class="content-grid">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="duration">25:18</span>
+                                </div>
+                                <div class="video-info">
+                                    <h4 id="video4-title-en">Data Sharing Standards and Protocols</h4>
+                                    <h4 class="hidden" id="video4-title-nl">Data-uitwisseling Standaarden en Protocollen</h4>
+                                    <p id="video4-desc-en">Understanding the importance of standards and protocols for successful data sharing in agri-food supply chains.</p>
+                                    <p class="hidden" id="video4-desc-nl">Begrijp het belang van standaarden en protocollen voor succesvolle data-uitwisseling in agri-food toeleveringsketens.</p>
+                                    <div class="video-meta">
+                                        <span class="level">Intermediate</span>
+                                        <span class="views">723 views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-code"></i>
+                                </div>
+                                <div class="resource-info">
+                                    <h4 id="resource4-title-en">Interoperability Implementation Guide</h4>
+                                    <h4 class="hidden" id="resource4-title-nl">Interoperabiliteit Implementatie Gids</h4>
+                                    <p id="resource4-desc-en">Technical guide for implementing interoperability solutions in agri-food data systems.</p>
+                                    <p class="hidden" id="resource4-desc-nl">Technische gids voor het implementeren van interoperabiliteitsoplossingen in agri-food datasystemen.</p>
+                                    <a href="#" class="download-btn" id="download4-en">Download Guide</a>
+                                    <a href="#" class="download-btn hidden" id="download4-nl">Download Gids</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Smart Systems Content -->
+                    <div class="theme-panel" id="smart-systems">
+                        <div class="theme-header">
+                            <h3 id="theme5-title-en">Smart Business Information Systems</h3>
+                            <h3 class="hidden" id="theme5-title-nl">Slimme Bedrijfsinformatiesystemen</h3>
+                            <p id="theme5-desc-en">Discover how to develop intelligent systems that empower data-driven decision-making across the agri-food value chain.</p>
+                            <p class="hidden" id="theme5-desc-nl">Ontdek hoe je intelligente systemen kunt ontwikkelen die datagestuurde besluitvorming mogelijk maken in de agri-food keten.</p>
+                        </div>
+                        
+                        <div class="content-grid">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="duration">20:35</span>
+                                </div>
+                                <div class="video-info">
+                                    <h4 id="video5-title-en">Building Smart Information Systems</h4>
+                                    <h4 class="hidden" id="video5-title-nl">Bouwen van Slimme Informatiesystemen</h4>
+                                    <p id="video5-desc-en">Learn the principles and practices of developing smart information systems for agri-food organizations.</p>
+                                    <p class="hidden" id="video5-desc-nl">Leer de principes en praktijken van het ontwikkelen van slimme informatiesystemen voor agri-food organisaties.</p>
+                                    <div class="video-meta">
+                                        <span class="level">Advanced</span>
+                                        <span class="views">1.1k views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-excel"></i>
+                                </div>
+                                <div class="resource-info">
+                                    <h4 id="resource5-title-en">System Requirements Template</h4>
+                                    <h4 class="hidden" id="resource5-title-nl">Systeemvereisten Sjabloon</h4>
+                                    <p id="resource5-desc-en">Template for documenting system requirements and specifications for smart information systems.</p>
+                                    <p class="hidden" id="resource5-desc-nl">Sjabloon voor het documenteren van systeemvereisten en specificaties voor slimme informatiesystemen.</p>
+                                    <a href="#" class="download-btn" id="download5-en">Download Template</a>
+                                    <a href="#" class="download-btn hidden" id="download5-nl">Download Sjabloon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="academy-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title-en">Ready to Start Learning?</h2>
+                    <h2 class="hidden" id="cta-title-nl">Klaar om te Beginnen met Leren?</h2>
+                    <p id="cta-desc-en">Join our community of learners and stay updated with the latest insights in agri-food business informatics.</p>
+                    <p class="hidden" id="cta-desc-nl">Word lid van onze gemeenschap van leerlingen en blijf op de hoogte van de nieuwste inzichten in agri-food bedrijfsinformatica.</p>
+                    <a href="mailto:joep.tummers@wur.nl" class="cta-btn" id="cta-btn-en">Contact Us for Access</a>
+                    <a href="mailto:joep.tummers@wur.nl" class="cta-btn hidden" id="cta-btn-nl">Neem Contact Op voor Toegang</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+    
+    <script src="script.js"></script>
+    <script src="academy.js"></script>
+</body>
+</html>
