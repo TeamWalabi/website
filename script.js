@@ -1,20 +1,26 @@
 // Load header and footer components
 document.addEventListener('DOMContentLoaded', function() {
     // Load header
-    fetch('header.html')
+    fetch('./header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-container').innerHTML = data;
             setupMobileMenu();
             setupSubmenuToggle();
             updateSubmenuLanguage(getCurrentLanguage());
+        })
+        .catch(error => {
+            console.error('Error loading header:', error);
         });
     
     // Load footer
-    fetch('footer.html')
+    fetch('./footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading footer:', error);
         });
     
     // Check for stored language preference
@@ -207,7 +213,7 @@ function switchLanguage(lang) {
     // Update active state on language buttons
     const langButtons = document.querySelectorAll('.language-switch button');
     langButtons.forEach(button => {
-        if (button.textContent.toLowerCase() === lang.toUpperCase()) {
+        if (button.textContent.toLowerCase() === lang.toLowerCase()) {
             button.classList.add('active');
         } else {
             button.classList.remove('active');
@@ -219,6 +225,9 @@ function switchLanguage(lang) {
     
     // Update submenu language if it exists
     updateSubmenuLanguage(lang);
+    
+    // Dispatch custom event for other scripts to listen to
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
 }
 
 // Get current language
@@ -236,14 +245,14 @@ function updateSubmenuLanguage(lang) {
                 'Business Architecture',
                 'Digital Transformation',
                 'Digital Trends Exploration',
-                'Interoperability and Data Sharing Infrastructures',
+                'Interoperability & Data Sharing',
                 'Smart Business Information Systems'
             ],
             nl: [
                 'Bedrijfsarchitectuur',
                 'Digitale Transformatie',
                 'Verkenning Digitale Trends',
-                'Interoperabiliteit en Data-uitwisselingsinfrastructuren',
+                'Interoperabiliteit & Data-uitwisseling',
                 'Slimme Bedrijfsinformatiesystemen'
             ]
         };

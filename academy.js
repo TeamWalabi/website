@@ -1,5 +1,10 @@
 // WALABI Academy functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Only load header/footer if we're on the academy page
+    if (window.location.pathname.includes('academy.html')) {
+        loadHeaderFooter();
+    }
+    
     setupAcademyTabs();
     setupAcademyLanguage();
     
@@ -9,6 +14,121 @@ document.addEventListener('DOMContentLoaded', function() {
         switchAcademyLanguage(storedLang);
     }
 });
+
+// Load header and footer
+function loadHeaderFooter() {
+    // Load header
+    fetch('./header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+            setupHeaderNavigation();
+        })
+        .catch(error => {
+            console.error('Error loading header:', error);
+            // Fallback header
+            document.getElementById('header-container').innerHTML = createFallbackHeader();
+        });
+    
+    // Load footer
+    fetch('./footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error loading footer:', error);
+            // Fallback footer
+            document.getElementById('footer-container').innerHTML = createFallbackFooter();
+        });
+}
+
+// Setup header navigation for academy page
+function setupHeaderNavigation() {
+    // Handle theme dropdown navigation
+    const themeLinks = document.querySelectorAll('[href^="#theme"]');
+    themeLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Redirect to homepage with theme anchor
+            window.location.href = './index.html' + this.getAttribute('href');
+        });
+    });
+    
+    // Handle other navigation links
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            if (href === '#about-section' || href === '#themes-section' || 
+                href === '#services-section' || href === '#track-record-section') {
+                // Redirect to homepage with anchor
+                window.location.href = './index.html' + href;
+            }
+        });
+    });
+    
+    // Handle language switching in header
+    const langButtons = document.querySelectorAll('.language-switch button');
+    langButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const lang = this.textContent.toLowerCase();
+            switchLanguage(lang);
+            
+            // Update header language buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+}
+
+// Create fallback header if loading fails
+function createFallbackHeader() {
+    return `
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <a href="./index.html">
+                        <img src="./images/Walabi-logo_large.png" alt="WALABI Logo" class="logo">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="./index.html#about-section">About</a></li>
+                    <li><a href="./index.html#themes-section">Themes</a></li>
+                    <li><a href="./index.html#services-section">Services</a></li>
+                    <li><a href="./academy.html">Academy</a></li>
+                    <li><a href="./index.html#contact-section">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    `;
+}
+
+// Create fallback footer if loading fails
+function createFallbackFooter() {
+    return `
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p>Email: <a href="mailto:walabi.wser@wur.nl">walabi.wser@wur.nl</a></p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="./index.html#about-section">About</a></li>
+                            <li><a href="./index.html#themes-section">Themes</a></li>
+                            <li><a href="./index.html#services-section">Services</a></li>
+                            <li><a href="./academy.html">Academy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    `;
+}
 
 // Setup tab functionality
 function setupAcademyTabs() {
