@@ -22,7 +22,129 @@ document.addEventListener('DOMContentLoaded', function() {
     if (storedLang) {
         switchLanguage(storedLang);
     }
+    
+    // Setup services carousel
+    setupServicesCarousel();
 });
+
+// Services Carousel functionality
+function setupServicesCarousel() {
+    const servicesGrid = document.querySelector('.services-grid');
+    const prevBtn = document.getElementById('services-prev-btn');
+    const nextBtn = document.getElementById('services-next-btn');
+    const dotsContainer = document.getElementById('services-dots');
+    
+    if (!servicesGrid || !prevBtn || !nextBtn || !dotsContainer) return;
+    
+    const serviceCards = servicesGrid.querySelectorAll('.service-card');
+    const totalServices = serviceCards.length;
+    let currentIndex = 0;
+    let cardsPerView = getCardsPerView();
+    
+    // Create dots
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        const totalDots = Math.ceil(totalServices / cardsPerView);
+        
+        for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+    }
+    
+    // Get number of cards that fit per view
+    function getCardsPerView() {
+        if (window.innerWidth <= 768) return 1;
+        if (window.innerWidth <= 1024) return 2;
+        return 3;
+    }
+    
+    // Update carousel position
+    function updateCarousel() {
+        const cardWidth = 350 + 32; // card width + gap
+        const translateX = -currentIndex * (cardsPerView * cardWidth);
+        servicesGrid.style.transform = `translateX(${translateX}px)`;
+        
+        // Update dots
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+        
+        // Update navigation buttons
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= Math.ceil(totalServices / cardsPerView) - 1;
+    }
+    
+    // Go to specific slide
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+    
+    // Next slide
+    function nextSlide() {
+        if (currentIndex < Math.ceil(totalServices / cardsPerView) - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    }
+    
+    // Event listeners
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        cardsPerView = getCardsPerView();
+        currentIndex = 0;
+        updateCarousel();
+        createDots();
+    });
+    
+    // Initialize carousel
+    createDots();
+    updateCarousel();
+    
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+    
+    servicesGrid.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+    
+    servicesGrid.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - next
+                nextSlide();
+            } else {
+                // Swipe right - previous
+                prevSlide();
+            }
+        }
+    }
+}
 
 // Mobile menu toggle
 function setupMobileMenu() {
