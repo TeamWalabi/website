@@ -245,14 +245,14 @@ function updateSubmenuLanguage(lang) {
                 'Business Architecture',
                 'Digital Transformation',
                 'Digital Trends Exploration',
-                'Interoperability & Data Sharing',
+                'Interoperability and Data Sharing Infrastructures',
                 'Smart Business Information Systems'
             ],
             nl: [
                 'Bedrijfsarchitectuur',
                 'Digitale Transformatie',
                 'Verkenning Digitale Trends',
-                'Interoperabiliteit & Data-uitwisseling',
+                'Interoperabiliteit en Data-uitwisselingsinfrastructuren',
                 'Slimme Bedrijfsinformatiesystemen'
             ]
         };
