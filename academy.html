@@ -4,9 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WALABI Academy - Wageningen Lab for Agri-Food Business Informatics</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- CSS Files with absolute paths for GitHub Pages -->
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Inline CSS as backup for GitHub Pages -->
+    <style>
+        /* Critical CSS variables */
+        :root {
+            --primary-green: #0a9d39;
+            --secondary-blue: #1e3a8a;
+            --white: #ffffff;
+            --light-gray: #f8fafc;
+            --medium-gray: #e2e8f0;
+            --dark-gray: #334155;
+            --transition-speed: 0.3s;
+        }
+        
+        /* Basic reset and fallback styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        /* Academy Hero Section - Fallback */
+        .academy-hero {
+            background: linear-gradient(135deg, #0a9d39, #1e3a8a);
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+        }
+        
+        .academy-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .academy-hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            opacity: 0.9;
+        }
+        
+        .academy-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        /* Language Switch */
+        .language-switch {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .language-switch button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .language-switch button:hover,
+        .language-switch button.active {
+            background: rgba(255, 255, 255, 0.9);
+            color: #0a9d39;
+        }
+        
+        /* Tab Buttons - Fallback */
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tab-btn {
+            background: white;
+            border: 2px solid #e2e8f0;
+            color: #334155;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 200px;
+            justify-content: center;
+        }
+        
+        .tab-btn:hover {
+            border-color: #0a9d39;
+            color: #0a9d39;
+            transform: translateY(-2px);
+        }
+        
+        .tab-btn.active {
+            background: #0a9d39;
+            border-color: #0a9d39;
+            color: white;
+        }
+        
+        /* Theme Panels - Fallback */
+        .theme-panel {
+            display: none;
+        }
+        
+        .theme-panel.active {
+            display: block;
+        }
+        
+        /* Content Grid - Fallback */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Video Cards - Fallback */
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
+            background: linear-gradient(135deg, #0a9d39, #1e3a8a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .video-thumbnail i {
+            font-size: 4rem;
+            color: white;
+            opacity: 0.9;
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        /* Responsive - Fallback */
+        @media (max-width: 768px) {
+            .academy-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header will be loaded here -->
@@ -50,7 +242,7 @@
                 <h2 class="section-title hidden" id="themes-title-nl">Leerthema's</h2>
                 
                 <div class="themes-tabs">
-                    <div class="tab-buttons">
+                    <div class="tab-buttons" id="tab-buttons-en">
                         <button class="tab-btn active" data-theme="business-architecture" id="tab1-en">
                             <i class="fas fa-building"></i>
                             Business Architecture
@@ -333,7 +525,94 @@
     <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
     
-    <script src="script.js"></script>
-    <script src="academy.js"></script>
+    <!-- JavaScript Files with proper paths for GitHub Pages -->
+    <script src="./script.js"></script>
+    <script src="./academy.js"></script>
+    
+    <!-- Fallback script loading check -->
+    <script>
+        // Check if scripts loaded properly
+        window.addEventListener('load', function() {
+            if (typeof WALABIAcademy === 'undefined') {
+                console.warn('WALABIAcademy not loaded, checking script status...');
+                
+                // Try to load academy.js again if it failed
+                if (typeof setupAcademyTabs === 'undefined') {
+                    console.error('Academy scripts failed to load');
+                    
+                    // Basic fallback functionality
+                    document.addEventListener('click', function(e) {
+                        if (e.target.classList.contains('tab-btn')) {
+                            const targetTheme = e.target.getAttribute('data-theme');
+                            const themePanels = document.querySelectorAll('.theme-panel');
+                            const tabButtons = document.querySelectorAll('.tab-btn');
+                            
+                            // Remove active from all
+                            tabButtons.forEach(btn => btn.classList.remove('active'));
+                            themePanels.forEach(panel => panel.classList.remove('active'));
+                            
+                            // Add active to clicked
+                            e.target.classList.add('active');
+                            
+                            // Show panel
+                            const targetPanel = document.getElementById(targetTheme);
+                            if (targetPanel) {
+                                targetPanel.classList.add('active');
+                            }
+                        }
+                    });
+                    
+                    // Basic language switching fallback
+                    window.switchLanguage = function(lang) {
+                        console.log('Fallback language switch to:', lang);
+                        
+                        // Hide/show language-specific elements
+                        const elements = document.querySelectorAll('[id$="-en"], [id$="-nl"]');
+                        elements.forEach(el => {
+                            const id = el.id;
+                            const idLang = id.slice(id.lastIndexOf('-') + 1);
+                            
+                            if (idLang === lang) {
+                                el.classList.remove('hidden');
+                            } else {
+                                el.classList.add('hidden');
+                            }
+                        });
+                        
+                        // Update tab buttons visibility
+                        const tabButtonsEn = document.getElementById('tab-buttons-en');
+                        const tabButtonsNl = document.getElementById('tab-buttons-nl');
+                        
+                        if (lang === 'nl') {
+                            if (tabButtonsEn) tabButtonsEn.classList.add('hidden');
+                            if (tabButtonsNl) tabButtonsNl.classList.remove('hidden');
+                        } else {
+                            if (tabButtonsEn) tabButtonsEn.classList.remove('hidden');
+                            if (tabButtonsNl) tabButtonsNl.classList.add('hidden');
+                        }
+                        
+                        // Update active tab
+                        const visibleTabButtons = lang === 'nl' ? tabButtonsNl : tabButtonsEn;
+                        if (visibleTabButtons) {
+                            const firstTab = visibleTabButtons.querySelector('.tab-btn');
+                            if (firstTab) {
+                                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                                firstTab.classList.add('active');
+                                
+                                const targetTheme = firstTab.getAttribute('data-theme');
+                                const targetPanel = document.getElementById(targetTheme);
+                                if (targetPanel) {
+                                    document.querySelectorAll('.theme-panel').forEach(panel => panel.classList.remove('active'));
+                                    targetPanel.classList.add('active');
+                                }
+                            }
+                        }
+                    };
+                }
+            } else {
+                console.log('WALABIAcademy loaded successfully');
+            }
+        });
+    </script>
 </body>
 </html>

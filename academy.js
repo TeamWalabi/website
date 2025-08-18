@@ -15,9 +15,12 @@ function setupAcademyTabs() {
     const tabButtons = document.querySelectorAll('.tab-btn');
     const themePanels = document.querySelectorAll('.theme-panel');
     
+    console.log('Setting up academy tabs, found buttons:', tabButtons.length);
+    
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
             const targetTheme = this.getAttribute('data-theme');
+            console.log('Tab clicked:', targetTheme);
             
             // Remove active class from all tabs and panels
             tabButtons.forEach(btn => btn.classList.remove('active'));
@@ -30,9 +33,23 @@ function setupAcademyTabs() {
             const targetPanel = document.getElementById(targetTheme);
             if (targetPanel) {
                 targetPanel.classList.add('active');
+                console.log('Panel activated:', targetTheme);
+            } else {
+                console.error('Panel not found for theme:', targetTheme);
             }
         });
     });
+    
+    // Initialize first tab as active
+    const firstTab = document.querySelector('.tab-btn.active');
+    if (firstTab) {
+        const firstTheme = firstTab.getAttribute('data-theme');
+        const firstPanel = document.getElementById(firstTheme);
+        if (firstPanel) {
+            firstPanel.classList.add('active');
+            console.log('Initial panel activated:', firstTheme);
+        }
+    }
 }
 
 // Setup academy language switching
@@ -45,6 +62,8 @@ function setupAcademyLanguage() {
 
 // Switch academy language
 function switchAcademyLanguage(lang) {
+    console.log('Switching academy language to:', lang);
+    
     const elements = document.querySelectorAll('[id$="-en"], [id$="-nl"]');
     
     elements.forEach(el => {
@@ -60,34 +79,59 @@ function switchAcademyLanguage(lang) {
     });
     
     // Update tab buttons language
-    const tabButtonsEn = document.querySelector('.tab-buttons');
+    const tabButtonsEn = document.getElementById('tab-buttons-en');
     const tabButtonsNl = document.getElementById('tab-buttons-nl');
     
     if (lang === 'nl') {
-        tabButtonsEn.classList.add('hidden');
-        tabButtonsNl.classList.remove('hidden');
+        if (tabButtonsEn) tabButtonsEn.classList.add('hidden');
+        if (tabButtonsNl) tabButtonsNl.classList.remove('hidden');
     } else {
-        tabButtonsEn.classList.remove('hidden');
-        tabButtonsNl.classList.add('hidden');
+        if (tabButtonsEn) tabButtonsEn.classList.remove('hidden');
+        if (tabButtonsNl) tabButtonsNl.classList.add('hidden');
     }
     
-    // Update active tab
+    // Update active tab and ensure proper panel is shown
     updateActiveTab(lang);
+    
+    // Re-setup tabs after language change
+    setTimeout(() => {
+        setupAcademyTabs();
+    }, 100);
 }
 
 // Update active tab based on language
 function updateActiveTab(lang) {
-    const activeTab = document.querySelector('.tab-btn.active');
-    if (activeTab) {
-        const targetTheme = activeTab.getAttribute('data-theme');
+    console.log('Updating active tab for language:', lang);
+    
+    // Find the currently visible tab buttons container
+    const visibleTabButtons = lang === 'nl' ? 
+        document.getElementById('tab-buttons-nl') : 
+        document.getElementById('tab-buttons-en');
+    
+    if (!visibleTabButtons) {
+        console.error('Visible tab buttons container not found for language:', lang);
+        return;
+    }
+    
+    // Find the first tab in the visible container and make it active
+    const firstVisibleTab = visibleTabButtons.querySelector('.tab-btn');
+    if (firstVisibleTab) {
+        // Remove active from all tabs
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         
-        // Find corresponding tab in new language
-        const newActiveTab = document.querySelector(`[data-theme="${targetTheme}"]:not(.hidden)`);
-        if (newActiveTab) {
-            // Remove active from all tabs
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            // Add active to new tab
-            newActiveTab.classList.add('active');
+        // Add active to first visible tab
+        firstVisibleTab.classList.add('active');
+        
+        // Show corresponding panel
+        const targetTheme = firstVisibleTab.getAttribute('data-theme');
+        const targetPanel = document.getElementById(targetTheme);
+        
+        if (targetPanel) {
+            // Hide all panels
+            document.querySelectorAll('.theme-panel').forEach(panel => panel.classList.remove('active'));
+            // Show target panel
+            targetPanel.classList.add('active');
+            console.log('Updated active tab to:', targetTheme);
         }
     }
 }
