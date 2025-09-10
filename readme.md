@@ -1,116 +1,131 @@
-# WALABI Website
+<p align="center">
+  <img src="images/Walabi-logo_large.png" alt="WALABI" height="90" />
+</p>
 
-This repository contains the website for WALABI - Wageningen Lab for Agri-Food Business Informatics and other relevant information
+<h2 align="center">WALABI Website</h2>
+
+<p align="center">
+  Wageningen Lab for Agri‑Food Business Informatics
+  <br/>
+  <a href="index.html"><strong>English Home</strong></a> ·
+  <a href="index-nl.html"><strong>Nederlandse Home</strong></a> ·
+  <a href="academy.html"><strong>Academy</strong></a>
+</p>
+
+<p align="center">
+  <a href="#getting-started"><img alt="status" src="https://img.shields.io/badge/site-static-green?style=for-the-badge" /></a>
+  <a href="#features"><img alt="tech" src="https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-blue?style=for-the-badge" /></a>
+  <a href="#responsive-design"><img alt="responsive" src="https://img.shields.io/badge/responsive-yes-success?style=for-the-badge" /></a>
+</p>
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Deployment (GitHub Pages)](#deployment-github-pages)
+- [Customization](#customization)
+- [Language Switching](#language-switching)
+- [Responsive Design](#responsive-design)
+- [Browser Compatibility](#browser-compatibility)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Overview
+
+This repository contains the static website for WALABI — Wageningen Lab for Agri‑Food Business Informatics.
+
+## Features
+
+- Clean, responsive layout with reusable `header.html` and `footer.html`
+- English and Dutch landing pages (`index.html`, `index-nl.html`)
+- Dedicated Academy page (`academy.html`)
+- Vanilla HTML/CSS/JS stack, easy to host on GitHub Pages
+- Simple scripts for language preference persistence
 
 ## Project Structure
 
 ```
 /
-├── index.html         # Main English page
-├── index-nl.html      # Dutch version of the main page
-├── header.html        # Header component
-├── footer.html        # Footer component
-├── styles.css         # Stylesheet
-├── script.js          # JavaScript functionality
-├── images/            # Image directory
-│   └── walabi-logo.png  # Logo file
-└── README.md          # This file
+├── index.html          # Main English page
+├── index-nl.html       # Dutch version of the main page
+├── academy.html        # Academy page
+├── header.html         # Header component
+├── footer.html         # Footer component
+├── styles.css          # Stylesheet
+├── script.js           # JavaScript functionality
+├── images/             # Image directory
+│   ├── Walabi-logo_large.png
+│   └── Walabi-logo_white.png
+├── CNAME               # Custom domain configuration (if used)
+└── readme.md           # This file
 ```
 
-## Setup Instructions for GitHub Pages
+## Getting Started
 
-### 1. Create a GitHub Repository
+Run a local server to preview includes (`header.html`, `footer.html`) correctly:
 
-1. Go to [GitHub](https://github.com) and sign in to your account.
-2. Click on the "+" icon in the top right corner and select "New repository".
-3. Name your repository (e.g., "walabi-website").
-4. Make sure it's set to "Public".
-5. Click "Create repository".
+### Option A: VS Code Live Server
+1. Open this folder in VS Code
+2. Install the "Live Server" extension
+3. Right‑click `index.html` → "Open with Live Server"
 
-### 2. Upload Files
+### Option B: Node
+```
+npx serve
+```
+Then open the printed localhost URL.
 
-#### Option 1: Using GitHub Web Interface
+### Option C: Python
+```
+python3 -m http.server 8080
+```
+Then visit `http://localhost:8080`.
 
-1. Navigate to your newly created repository.
-2. Click the "Add file" button and select "Upload files".
-3. Drag and drop or select all the website files from your local directory.
-4. Add a commit message (e.g., "Initial website upload").
-5. Click "Commit changes".
+## Deployment (GitHub Pages)
 
-#### Option 2: Using Git Command Line
+1. Push your changes to the default branch (e.g., `main`)
+2. In GitHub → Settings → Pages, set Source to your default branch
+3. If using a custom domain, add it in Pages and keep the `CNAME` file
 
-1. Open a terminal/command prompt.
-2. Navigate to your local website directory.
-3. Initialize Git repository:
-   ```
-   git init
-   ```
-4. Add remote repository:
-   ```
-   git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-   ```
-5. Add all files:
-   ```
-   git add .
-   ```
-6. Commit files:
-   ```
-   git commit -m "Initial website upload"
-   ```
-7. Push to GitHub:
-   ```
-   git push -u origin main
-   ```
-
-### 3. Enable GitHub Pages
-
-1. Go to your repository on GitHub.
-2. Click "Settings" (tab near the top).
-3. Scroll down to the "GitHub Pages" section.
-4. Under "Source", select "main" branch.
-5. Click "Save".
-6. After a few minutes, your site will be published at: `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`
-
-### 4. Add Logo
-
-1. Create an "images" folder in your repository if it doesn't exist.
-2. Upload the WALABI logo (walabi-logo.png) to this folder.
-3. Make sure the image paths in your HTML files point to "images/walabi-logo.png".
+Your site will be published shortly after saving.
 
 ## Customization
 
-- **Colors**: Edit the CSS variables in the `:root` selector in `styles.css` to match the WALABI color scheme.
-- **Content**: Replace the lorem ipsum text with actual content about WALABI's themes and track record.
-- **Additional pages**: Create new HTML files for additional pages as needed.
+- **Colors**: Adjust CSS variables in `styles.css` under `:root`
+- **Content**: Replace placeholder copy with WALABI themes, projects, and track record
+- **Pages**: Duplicate `index.html` to add new sections/pages as needed
 
 ## Language Switching
 
-The website includes built-in language switching between English and Dutch versions. The language preference is saved in the browser's local storage.
+Language preference is stored in the browser (local storage), enabling seamless switching between English and Dutch versions.
 
 ## Responsive Design
 
-The website is responsive and works on mobile, tablet, and desktop devices. The menu automatically converts to a mobile-friendly menu on smaller screens.
+Optimized for mobile, tablet, and desktop. The navigation adapts automatically on smaller screens.
 
 ## Browser Compatibility
 
-The website is compatible with modern browsers including:
+Tested on modern browsers:
 - Chrome
 - Firefox
 - Safari
 - Edge
 
-## Local Development
+## Contributing
 
-To run the website locally:
+Issues and pull requests are welcome. For larger changes, please open an issue first to discuss what you would like to change.
 
-1. Clone the repository to your local machine.
-2. Open the folder in your code editor.
-3. Due to CORS restrictions, you'll need to run a local server to properly load the header and footer components.
-   
-   You can use the Live Server extension in Visual Studio Code or run:
-   ```
-   npx serve
-   ```
-   if you have Node.js installed.
+## License
 
-4. Open the browser and navigate to the localhost URL provided by your local server.
+Unless stated otherwise in this repository, content is provided under standard copyright. If you intend to add a license, place it in `LICENSE` and update this section.
+
+## Contact
+
+For questions or collaboration:
+- Open an issue in this repository
+- Or reach out via the lab’s standard communication channels
