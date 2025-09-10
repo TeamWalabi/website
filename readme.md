@@ -1,6 +1,6 @@
 # WALABI Website
 
-This repository contains the website for WALABI - Wageningen Lab for Agri-Food Business Informatics.
+This repository contains the website for WALABI - Wageningen Lab for Agri-Food Business Informatics and other relevant information
 
 ## Project Structure
 
