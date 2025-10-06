@@ -1,412 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WALABI - Wageningen Lab for Agri-Food Business Informatics</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <title>WALABI | Agri-Food Digital Transformation that Delivers</title>
+  <meta name="description" content="WALABI aligns strategy, data, and systems so agri-food organizations deliver measurable outcomes—through business architecture, interoperability, smart information systems, and digital trends." />
+  <link rel="canonical" href="https://arnabgupta1979.github.io/testWALABI/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WALABI | Agri-Food Digital Transformation that Delivers" />
+  <meta property="og:description" content="Align strategy, data, and systems to deliver real outcomes in agri-food." />
+  <meta property="og:url" content="https://arnabgupta1979.github.io/testWALABI/" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WALABI | Agri-Food Digital Transformation that Delivers" />
+  <meta name="twitter:description" content="Align strategy, data, and systems to deliver real outcomes in agri-food." />
+  <meta name="twitter:image" content="assets/og-image.jpg" />
+
+  <!-- Internationalization note: bilingual page (EN/NL). For best SEO create /nl/ later -->
+  <link rel="alternate" hreflang="en" href="https://arnabgupta1979.github.io/testWALABI/" />
+  <link rel="alternate" hreflang="nl" href="https://arnabgupta1979.github.io/testWALABI/" />
+
+  <!-- PWA / theming -->
+  <meta name="theme-color" content="#007C9E" />
+
+  <!-- Styles (Verdana, WUR palette). Keep relative paths for GitHub Pages -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Icons (optional). You can replace with inline SVG later -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+
+  <!-- JSON-LD: Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"WALABI — Wageningen Lab for Agri-Food Business Informatics",
+    "url":"https://arnabgupta1979.github.io/testWALABI/",
+    "logo":"assets/logo.png",
+    "sameAs":["https://www.wur.nl/"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "url":"https://arnabgupta1979.github.io/testWALABI/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://arnabgupta1979.github.io/testWALABI/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
-    <!-- Header will be loaded here -->
-    <div id="header-container"></div>
-    
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>WALABI</h1>
-                    <h2>Wageningen Lab for Agri-Food Business Informatics</h2>
-                    <p>Driving innovation through business informatics in the agriculture and food industry</p>
-                    <div class="language-switch">
-                        <button class="active" onclick="switchLanguage('en')">EN</button>
-                        <button onclick="switchLanguage('nl')">NL</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="about" id="about-section">
-            <div class="container">
-                <h2 class="section-title" id="about-title-en">About WALABI</h2>
-                <h2 class="section-title hidden" id="about-title-nl">Over WALABI</h2>
-                <div class="about-content">
-                    <div class="about-text" id="about-text-en">
-                        <p>WALABI is the research laboratory of Wageningen University in the field of business informatics in the agri-food industry. We believe that digital innovations in the agri-food domain are not goals in themselves, but means to improve sustainability and deliver value to end users.</p>
-                        <p>WALABI strives to achieve this through impactful, collaborative, and rigorous research in business informatics. As an interdisciplinary technical discipline, business informatics systematically analyzes, designs, and applies information systems in business contexts - from a deep organizational understanding and using insights from business sciences such as logistics, business economics, marketing, and management studies.</p>
-                        <p>WALABI serves as a bridge between domain-specific and technical disciplines, and equips our clients with the knowledge and competencies to make an impact with data and digital technologies. We translate key concepts from various business disciplines into new information designs that enable innovative practical applications from farm to fork. Through this holistic, business-oriented technical approach, we stimulate innovations that anchor sustainability in the lifeblood of agri-food organizations by leveraging data and digital technologies.</p>
-                    </div>
-                    <div class="about-text hidden" id="about-text-nl">
-                        <p>WALABI is het onderzoekslaboratorium van Wageningen Universiteit op het gebied van bedrijfsinformatica in de landbouw- en voedselindustrie. Wij zijn ervan overtuigd dat digitale innovaties in het agri-food domein geen doelen op zich zijn, maar middelen om duurzaamheid te verbeteren en waarde te leveren aan de eindgebruikers.</p>
-                        <p>WALABI streeft ernaar dit te bereiken door impactvol, samenwerkend en rigoureus onderzoek in bedrijfsinformatica. Als interdisciplinaire technische discipline analyseert, ontwerpt en past bedrijfsinformatica systematisch informatiesystemen toe in bedrijfscontexten - vanuit een diep organisatorisch begrip en gebruikmakend van inzichten uit bedrijfswetenschappen zoals logistiek, bedrijfseconomie, marketing en managementstudies.</p>
-                        <p>WALABI fungeert als een brug tussen domeinspecifieke en technische disciplines, en rust onze klanten uit met de kennis en competenties om impact te maken met data en digitale technologieën. We vertalen sleutelconcepten uit verschillende bedrijfsdisciplines naar nieuwe informatieontwerpen die innovatieve praktische toepassingen mogelijk maken van boer tot bord. Door deze holistische, bedrijfsgerichte technische benadering, stimuleren we innovaties die duurzaamheid verankeren in de levensader van agri-food organisaties door gebruik te maken van data en digitale technologieën.</p>
-                    </div>
-                    
-                    <div class="academy-link">
-                        <p id="academy-link-text-en">Ready to dive deeper? Explore our <a href="https://walabi.eu/academy.html" class="academy-link-btn">WALABI Academy</a> for comprehensive learning materials and expert insights.</p>
-                        <p id="academy-link-text-nl" class="hidden">Klaar om dieper te duiken? Verken onze <a href="https://walabi.eu/academy.html" class="academy-link-btn">WALABI Academy</a> voor uitgebreide leermaterialen en expertinzichten.</p>
-                    </div>
-                    
-                </div>
-                
-                <div class="booking-section">
-                    <div class="booking-content" id="booking-content-en">
-                        <h3>Ready to get started?</h3>
-                        <p>Book your free intake meeting with the WALABI team to discuss how we can help with your digital transformation needs.</p>
-                        <a href="https://outlook.office.com/book/WalabiIntake@wageningenur4.onmicrosoft.com/s/rhyxgdQc5UuhMlm9A3z4kg2" target="_blank" class="booking-btn">Book Your Free Intake Meeting</a>
-                    </div>
-                    <div class="booking-content hidden" id="booking-content-nl">
-                        <h3>Klaar om te beginnen?</h3>
-                        <p>Boek uw gratis intake gesprek met team WALABI om te bespreken hoe we kunnen helpen met uw digitale transformatie behoeften.</p>
-                        <a href="https://outlook.office.com/book/WalabiIntake@wageningenur4.onmicrosoft.com/s/rhyxgdQc5UuhMlm9A3z4kg2" target="_blank" class="booking-btn">Boek uw gratis intake gesprek</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="themes" id="themes-section">
-            <div class="container">
-                <h2 class="section-title" id="themes-title-en">Our Themes</h2>
-                <h2 class="section-title hidden" id="themes-title-nl">Onze Thema's</h2>
-                
-                <div class="theme-grid">
-                    <div class="theme-card" id="theme1">
-                        <div class="theme-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3 id="theme1-title-en">Business Architecture</h3>
-                        <h3 class="hidden" id="theme1-title-nl">Bedrijfsarchitectuur</h3>
-                        <p id="theme1-text-en">We design future-proof digital infrastructures that align technology with business goals. We translate architectural visions into actionable transformation roadmaps, ensure scalability, security, and interoperability in IT landscapes, and help organizations navigate complexity and uncertainty with confidence.</p>
-                        <p class="hidden" id="theme1-text-nl">Wij ontwerpen toekomstbestendige digitale infrastructuren die technologie afstemmen op bedrijfsdoelen. We vertalen architectuurvisies naar uitvoerbare transformatieroutes, zorgen voor schaalbaarheid, veiligheid en interoperabiliteit in IT-landschappen, en helpen organisaties om met vertrouwen complexiteit en onzekerheid te navigeren.</p>
-                    </div>
-                    
-                    <div class="theme-card" id="theme2">
-                        <div class="theme-icon">
-                            <i class="fas fa-digital-tachograph"></i>
-                        </div>
-                        <h3 id="theme2-title-en">Digital Transformation</h3>
-                        <h3 class="hidden" id="theme2-title-nl">Digitale Transformatie</h3>
-                        <p id="theme2-text-en">We guide organizations through their digital transformation by developing strategic visions, implementing new technologies, and facilitating organizational change. Our approach combines technical expertise with deep understanding of the agri-food sector.</p>
-                        <p class="hidden" id="theme2-text-nl">Wij begeleiden organisaties in hun digitale transformatie door het ontwikkelen van strategische visies, het implementeren van nieuwe technologieën en het faciliteren van organisatorische verandering. Onze aanpak combineert technische expertise met diepgaand begrip van de agri-food sector.</p>
-                    </div>
-                    
-                    <div class="theme-card" id="theme3">
-                        <div class="theme-icon">
-                            <i class="fas fa-binoculars"></i>
-                        </div>
-                        <h3 id="theme3-title-en">Digital Trends Exploration</h3>
-                        <h3 class="hidden" id="theme3-title-nl">Verkenning Digitale Trends</h3>
-                        <p id="theme3-text-en">We make emerging digital technologies understandable and actionable for the agri-food sector. We scout and analyze digital trends from both technology-push and sector-pull perspectives, test innovations through pilots and prototypes, and provide strategic guidance through action agendas and roadmaps.</p>
-                        <p class="hidden" id="theme3-text-nl">Wij maken opkomende digitale technologieën begrijpelijk en toepasbaar voor de agri-food sector. We verkennen en analyseren digitale trends vanuit zowel technologisch als sectorperspectief, testen innovaties via pilots en prototypes, en bieden strategische begeleiding door actieagenda's en routekaarten.</p>
-                    </div>
-                    
-                    <div class="theme-card" id="theme4">
-                        <div class="theme-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3 id="theme4-title-en">Interoperability and Data Sharing Infrastructures</h3>
-                        <h3 class="hidden" id="theme4-title-nl">Interoperabiliteit en Data-uitwisselingsinfrastructuren</h3>
-                        <p id="theme4-text-en">We build the foundations for fair, secure, and transparent data collaboration. We address interoperability from semantic, organizational, technical, and legal perspectives, promote the use of standards and clear agreements for data sharing, and advocate for explainability and trust in digital ecosystems.</p>
-                        <p class="hidden" id="theme4-text-nl">Wij bouwen de fundamenten voor eerlijke, veilige en transparante datacollaboratie. We pakken interoperabiliteit aan vanuit semantisch, organisatorisch, technisch en juridisch perspectief, bevorderen het gebruik van standaarden en duidelijke afspraken voor data-uitwisseling, en pleiten voor uitlegbaarheid en vertrouwen in digitale ecosystemen.</p>
-                    </div>
-                    
-                    <div class="theme-card" id="theme5">
-                        <div class="theme-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 id="theme5-title-en">Smart Business Information Systems</h3>
-                        <h3 class="hidden" id="theme5-title-nl">Slimme Bedrijfsinformatiesystemen</h3>
-                        <p id="theme5-text-en">We develop intelligent systems that empower data-driven decision-making across the agri-food value chain. Our systems collect, process, and distribute data to enhance coordination and efficiency, apply descriptive, diagnostic, predictive, and prescriptive analytics, and support sustainability, profitability, and resilience.</p>
-                        <p class="hidden" id="theme5-text-nl">Wij ontwikkelen intelligente systemen die datagestuurde besluitvorming mogelijk maken in de agri-food keten. Onze systemen verzamelen, verwerken en distribueren data om coördinatie en efficiëntie te verbeteren, passen beschrijvende, diagnostische, voorspellende en voorschrijvende analyses toe, en ondersteunen duurzaamheid, winstgevendheid en veerkracht.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="services" id="services-section">
-            <div class="container">
-                <h2 class="section-title" id="services-title-en">Our Services</h2>
-                <h2 class="section-title hidden" id="services-title-nl">Onze Diensten</h2>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3 id="service1-title-en">Digital Maturity Assessment</h3>
-                            <h3 class="hidden" id="service1-title-nl">Digitale Volwassenheidstesten</h3>
-                            <p id="service1-desc-en">Get insight into the digital maturity of your organization or clients. We score on various organizational and digital dimensions and provide practical recommendations to take the next step.</p>
-                            <p class="hidden" id="service1-desc-nl">Krijg inzicht in de digitale volwassenheid van uw organisatie of klanten. We scoren op verschillende organisatorische en digitale dimensies en geven praktische aanbevelingen om de volgende stap te zetten.</p>
-                            
-                            <div class="service-details">
-                                <div class="detail-item">
-                                    <span class="detail-icon">📌</span>
-                                    <div class="detail-content">
-                                        <strong id="service1-for-en">For whom:</strong>
-                                        <strong class="hidden" id="service1-for-nl">Voor wie:</strong>
-                                        <span id="service1-for-text-en">Organizations and use cases that want to measure their digital maturity or assess clients.</span>
-                                        <span class="hidden" id="service1-for-text-nl">Organisaties en use cases die hun digitale volwassenheid willen meten of klanten willen beoordelen.</span>
-                                    </div>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-icon">📧</span>
-                                    <div class="detail-content">
-                                        <strong id="service1-contact-en">Contact person:</strong>
-                                        <strong class="hidden" id="service1-contact-nl">Contactpersoon:</strong>
-                                        <span>Joep Tummers (WUR) – <a href="mailto:joep.tummers@wur.nl">joep.tummers@wur.nl</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3 id="service2-title-en">User Acceptance Testing</h3>
-                            <h3 class="hidden" id="service2-title-nl">Gebruikersacceptatietesten</h3>
-                            <p id="service2-desc-en">Want to know if end users will actually use your technology? Through questionnaires and/or interviews, we map out acceptance, concerns, and adoption readiness. Results are reported clearly and comprehensively.</p>
-                            <p class="hidden" id="service2-desc-nl">Wilt u weten of eindgebruikers uw technologie echt gaan gebruiken? Met vragenlijsten en/of interviews brengen wij acceptatie, zorgen en adoptiebereidheid in kaart. Resultaten worden overzichtelijk gerapporteerd.</p>
-                            
-                            <div class="service-details">
-                                <div class="detail-item">
-                                    <span class="detail-icon">📌</span>
-                                    <div class="detail-content">
-                                        <strong id="service2-for-en">For whom:</strong>
-                                        <strong class="hidden" id="service2-for-nl">Voor wie:</strong>
-                                        <span id="service2-for-text-en">Use cases that seek alignment with end users' expectations and wishes.</span>
-                                        <span class="hidden" id="service2-for-text-nl">Use cases die aansluiting zoeken bij verwachtingen en wensen van eindgebruikers.</span>
-                                    </div>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-icon">📧</span>
-                                    <div class="detail-content">
-                                        <strong id="service2-contact-en">Contact person:</strong>
-                                        <strong class="hidden" id="service2-contact-nl">Contactpersoon:</strong>
-                                        <span>Joep Tummers (WUR) – <a href="mailto:joep.tummers@wur.nl">joep.tummers@wur.nl</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3 id="service3-title-en">Interoperability Testing</h3>
-                            <h3 class="hidden" id="service3-title-nl">Interoperabiliteitstesten</h3>
-                            <p id="service3-desc-en">Want to know how well your systems work together within the agri-food chain? We assess interoperability based on standards and provide advice on improvement points.</p>
-                            <p class="hidden" id="service3-desc-nl">Wilt u weten hoe goed uw systemen samenwerken binnen de agri-food keten? Wij beoordelen interoperabiliteit aan de hand van standaarden en geven advies over verbeterpunten.</p>
-                            
-                            <div class="service-details">
-                                <div class="detail-item">
-                                    <span class="detail-icon">📌</span>
-                                    <div class="detail-content">
-                                        <strong id="service3-for-en">For whom:</strong>
-                                        <strong class="hidden" id="service3-for-nl">Voor wie:</strong>
-                                        <span id="service3-for-text-en">Organizations that want to share data better or want to connect to dataspaces.</span>
-                                        <span class="hidden" id="service3-for-text-nl">Organisaties die data beter willen delen of willen aansluiten op dataspaces.</span>
-                                    </div>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-icon">📧</span>
-                                    <div class="detail-content">
-                                        <strong id="service3-contact-en">Contact person:</strong>
-                                        <strong class="hidden" id="service3-contact-nl">Contactpersoon:</strong>
-                                        <span>Joep Tummers (WUR) – <a href="mailto:joep.tummers@wur.nl">joep.tummers@wur.nl</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3 id="service4-title-en">Business Model Validation</h3>
-                            <h3 class="hidden" id="service4-title-nl">Businessmodelvalidatie</h3>
-                            <p id="service4-desc-en">Test the economic feasibility of your innovation using the Triple-Layered Business Model Canvas and expert interviews. You will receive a report with recommendations and visual representations.</p>
-                            <p class="hidden" id="service4-desc-nl">Toets de economische haalbaarheid van uw innovatie met behulp van het Triple-Layered Business Model Canvas en expertinterviews. U ontvangt een rapport met aanbevelingen en visuele weergaven.</p>
-                            
-                            <div class="service-details">
-                                <div class="detail-item">
-                                    <span class="detail-icon">📌</span>
-                                    <div class="detail-content">
-                                        <strong id="service4-for-en">For whom:</strong>
-                                        <strong class="hidden" id="service4-for-nl">Voor wie:</strong>
-                                        <span id="service4-for-text-en">Use cases that want to refine their revenue model or convince investors.</span>
-                                        <span class="hidden" id="service4-for-text-nl">Use cases die hun verdienmodel willen aanscherpen of investeerders willen overtuigen.</span>
-                                    </div>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-icon">📧</span>
-                                    <div class="detail-content">
-                                        <strong id="service4-contact-en">Contact person:</strong>
-                                        <strong class="hidden" id="service4-contact-nl">Contactpersoon:</strong>
-                                        <span>Joep Tummers (WUR) – <a href="mailto:joep.tummers@wur.nl">joep.tummers@wur.nl</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="services-navigation">
-                    <button class="nav-btn prev-btn" id="services-prev-btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="services-dots" id="services-dots"></div>
-                    <button class="nav-btn next-btn" id="services-next-btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </section>
-        
-        <section class="track-record" id="track-record-section">
-            <div class="container">
-                <h2 class="section-title" id="track-record-title-en">Track Record</h2>
-                <h2 class="section-title hidden" id="track-record-title-nl">Resultaten</h2>
-                
-                <div class="track-record-content">
-                    <p id="track-record-intro-en">At WALABI, we combine academic excellence with practical impact through our scientific publications and participation in national and European projects. Our research findings are published in leading journals, while our project work directly contributes to the digital transformation of the agri-food sector.</p>
-                    <p class="hidden" id="track-record-intro-nl">Bij WALABI combineren we academische excellentie met praktische impact door onze wetenschappelijke publicaties en deelname aan nationale en Europese projecten. Onze onderzoeksresultaten worden gepubliceerd in toonaangevende tijdschriften, terwijl ons projectwerk direct bijdraagt aan de digitale transformatie van de agri-food sector.</p>
-                    <ul class="track-record-list">
-                        <li id="track-record-item1-en">Successful implementation of digital transformation strategies for agricultural cooperatives</li>
-                        <li class="hidden" id="track-record-item1-nl">Succesvolle implementatie van digitale transformatiestrategieën voor landbouwcoöperaties</li>
-                        <li id="track-record-item2-en">Development of data sharing platforms that enhance supply chain visibility</li>
-                        <li class="hidden" id="track-record-item2-nl">Ontwikkeling van platforms voor gegevensuitwisseling die de zichtbaarheid van de toeleveringsketen verbeteren</li>
-                        <li id="track-record-item3-en">Design of business information systems that improve operational efficiency</li>
-                        <li class="hidden" id="track-record-item3-nl">Ontwerp van bedrijfsinformatiesystemen die de operationele efficiëntie verbeteren</li>
-                        <li id="track-record-item4-en">Consultation on digital trends and emerging technologies in the agri-food sector</li>
-                        <li class="hidden" id="track-record-item4-nl">Consultatie over digitale trends en opkomende technologieën in de agri-foodsector</li>
-                    </ul>
-                </div>
+  <!-- Header will be loaded here -->
+  <div id="header-container"></div>
 
-                <div class="research-output" style="margin-top: 4rem;">
-                    <div class="publications-showcase">
-                        <h3 id="publications-title-en">Key Scientific Publications</h3>
-                        <h3 class="hidden" id="publications-title-nl">Belangrijke Wetenschappelijke Publicaties</h3>
-                        
-                        <div class="theme-grid">
-                            <div class="theme-card">
-                                <div class="theme-icon">
-                                    <i class="fas fa-building"></i>
-                                </div>
-                                <h3 id="pub1-theme-en">Business Architecture</h3>
-                                <h3 class="hidden" id="pub1-theme-nl">Bedrijfsarchitectuur</h3>
-                                <h4 id="pub1-title-en">Architecture framework of IoT-based food and farm systems</h4>
-                                <h4 class="hidden" id="pub1-title-nl">Architectuurraamwerk voor IoT-gebaseerde voedsel- en boerderijsystemen</h4>
-                                <p class="authors">Cor Verdouw, Harald Sundmaeker, Bedir Tekinerdogan, et al.</p>
-                                <p class="year">2019</p>
-                                <a href="https://doi.org/10.1016/j.compag.2019.104939" target="_blank" class="publication-link" id="pub1-link-en">View Publication</a>
-                                <a href="https://doi.org/10.1016/j.compag.2019.104939" target="_blank" class="publication-link hidden" id="pub1-link-nl">Bekijk Publicatie</a>
-                            </div>
-                            
-                            <div class="theme-card">
-                                <div class="theme-icon">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <h3 id="pub2-theme-en">Smart Business Information Systems</h3>
-                                <h3 class="hidden" id="pub2-theme-nl">Slimme Bedrijfsinformatiesystemen</h3>
-                                <h4 id="pub2-title-en">A framework for modelling and designing transparency systems</h4>
-                                <h4 class="hidden" id="pub2-title-nl">Een raamwerk voor het modelleren en ontwerpen van transparantiesystemen</h4>
-                                <p class="authors">A Kassahun, C Verdouw, J Roomer</p>
-                                <p class="year">2023</p>
-                                <a href="https://doi.org/10.1016/j.heliyon.2023.e21095" target="_blank" class="publication-link" id="pub2-link-en">View Publication</a>
-                                <a href="https://doi.org/10.1016/j.heliyon.2023.e21095" target="_blank" class="publication-link hidden" id="pub2-link-nl">Bekijk Publicatie</a>
-                            </div>
-                            
-                            <div class="theme-card">
-                                <div class="theme-icon">
-                                    <i class="fas fa-binoculars"></i>
-                                </div>
-                                <h3 id="pub3-theme-en">Digital Trends Exploration</h3>
-                                <h3 class="hidden" id="pub3-theme-nl">Verkenning Digitale Trends</h3>
-                                <h4 id="pub3-title-en">Digital twins in smart farming</h4>
-                                <h4 class="hidden" id="pub3-title-nl">Digitale tweelingen in slimme landbouw</h4>
-                                <p class="authors">C Verdouw, B Tekinerdogan, A Beulens, S Wolfert</p>
-                                <p class="year">2021</p>
-                                <a href="https://doi.org/10.1016/j.agsy.2020.103046" target="_blank" class="publication-link" id="pub3-link-en">View Publication</a>
-                                <a href="https://doi.org/10.1016/j.agsy.2020.103046" target="_blank" class="publication-link hidden" id="pub3-link-nl">Bekijk Publicatie</a>
-                            </div>
-                        </div>
-                    </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Agri-Food Digital Transformation that Delivers</h1>
+          <h2>Wageningen Lab for Agri-Food Business Informatics</h2>
+          <p class="lead">We align strategy, data, and systems so your initiatives drive measurable gains in sustainability, efficiency, and growth.</p>
+          <div class="language-switch">
+            <button class="active" onclick="switchLanguage('en')">EN</button>
+            <button onclick="switchLanguage('nl')">NL</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    <div class="projects-showcase" style="margin-top: 4rem;">
-                        <h3 id="projects-title-en">Key Projects</h3>
-                        <h3 class="hidden" id="projects-title-nl">Belangrijke Projecten</h3>
-                        
-                        <div class="theme-grid">
-                            <div class="theme-card">
-                                <div class="theme-icon">
-                                    <i class="fas fa-binoculars"></i>
-                                </div>
-                                <h3 id="proj1-theme-en">Digital Trends Exploration</h3>
-                                <h3 class="hidden" id="proj1-theme-nl">Verkenning Digitale Trends</h3>
-                                <h4 id="proj1-title-en">AI for Future Food Systems</h4>
-                                <h4 class="hidden" id="proj1-title-nl">AI voor Toekomstige Voedselsystemen</h4>
-                                <p id="proj1-desc-en">Exploring the potential of artificial intelligence in transforming food systems</p>
-                                <p class="hidden" id="proj1-desc-nl">Onderzoek naar de mogelijkheden van kunstmatige intelligentie in de transformatie van voedselsystemen</p>
-                                <a href="https://research.wur.nl/en/projects/redesigning-future-food-production-systems-through-ai-and-robotic" target="_blank" class="project-link" id="proj1-link-en">View Project</a>
-                                <a href="https://research.wur.nl/en/projects/redesigning-future-food-production-systems-through-ai-and-robotic" target="_blank" class="project-link hidden" id="proj1-link-nl">Bekijk Project</a>
-                            </div>
-                            
-                            <div class="theme-card">
-                                <div class="theme-icon">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <h3 id="proj2-theme-en">Smart Business Information Systems</h3>
-                                <h3 class="hidden" id="proj2-theme-nl">Slimme Bedrijfsinformatiesystemen</h3>
-                                <h4>STREAMING</h4>
-                                <p id="proj2-desc-en">Developing smart solutions for real-time monitoring and management</p>
-                                <p class="hidden" id="proj2-desc-nl">Ontwikkeling van slimme oplossingen voor real-time monitoring en management</p>
-                            </div>
-                            
-                            <div class="theme-card">
-                                <div class="theme-icon">
-                                    <i class="fas fa-network-wired"></i>
-                                </div>
-                                <h3 id="proj3-theme-en">Interoperability and Data Sharing</h3>
-                                <h3 class="hidden" id="proj3-theme-nl">Interoperabiliteit en Data-uitwisseling</h3>
-                                <h4>AgrifoodTEF</h4>
-                                <p id="proj3-desc-en">Building the foundation for fair and transparent data collaboration</p>
-                                <p class="hidden" id="proj3-desc-nl">Bouwen aan de basis voor eerlijke en transparante datacollaboratie</p>
-                                <a href="https://www.agrifoodtef.eu" target="_blank" class="project-link" id="proj3-link-en">View Project</a>
-                                <a href="https://www.agrifoodtef.eu" target="_blank" class="project-link hidden" id="proj3-link-nl">Bekijk Project</a>
-                            </div>
-                            
-                            <div class="theme-card">
-                                <div class="theme-icon">
-                                    <i class="fas fa-digital-tachograph"></i>
-                                </div>
-                                <h3 id="proj4-theme-en">Digital Transformation</h3>
-                                <h3 class="hidden" id="proj4-theme-nl">Digitale Transformatie</h3>
-                                <h4 id="proj4-title-en">Food Safety for Africa</h4>
-                                <h4 class="hidden" id="proj4-title-nl">Voedselveiligheid voor Afrika</h4>
-                                <p id="proj4-desc-en">Knowledge platform and digital solutions for food safety</p>
-                                <p class="hidden" id="proj4-desc-nl">Kennisplatform en digitale oplossingen voor voedselveiligheid</p>
-                                <a href="https://foodsafety4africa.eu" target="_blank" class="project-link" id="proj4-link-en">View Project</a>
-                                <a href="https://foodsafety4africa.eu" target="_blank" class="project-link hidden" id="proj4-link-nl">Bekijk Project</a>
-                            </div>
-                        </div>
-                    </div>
+    <section class="about" id="about-section">
+      <div class="container">
+        <h2 class="section-title" id="about-title-en">About WALABI</h2>
+        <h2 class="section-title hidden" id="about-title-nl">Over WALABI</h2>
+
+        <div class="about-content">
+          <div class="about-text" id="about-text-en">
+            <p>WALABI is the Wageningen research lab for business informatics in the agri-food sector. Digital innovations are not the goal—they are a means to embed sustainability and deliver value to end users.</p>
+            <p>As an interdisciplinary technical discipline, business informatics analyzes, designs, and applies information systems in business contexts—grounded in organizational understanding and informed by logistics, economics, marketing, and management studies.</p>
+            <p>We bridge domain and technical disciplines, translating concepts into information designs and practical tools from farm to fork.</p>
+          </div>
+          <div class="about-text hidden" id="about-text-nl">
+            <p>WALABI is het Wageningse onderzoeks­lab voor bedrijfsinformatica in de agri-foodsector. Digitale innovaties zijn geen doel op zich, maar een middel om duurzaamheid te verankeren en waarde te leveren aan eindgebruikers.</p>
+            <p>Als interdisciplinaire technische discipline analyseert, ontwerpt en past bedrijfsinformatica informatiesystemen toe—gebaseerd op organisatie-inzicht en gevoed door logistiek, economie, marketing en managementstudies.</p>
+            <p>Wij slaan de brug tussen domein en techniek en vertalen concepten naar informatie­ontwerpen en praktische tools van boer tot bord.</p>
+          </div>
+
+          <div class="academy-link">
+            <p id="academy-link-text-en">Ready to dive deeper? Explore our <a href="academy.html" class="academy-link-btn">WALABI Academy</a>.</p>
+            <p id="academy-link-text-nl" class="hidden">Klaar om dieper te duiken? Bekijk onze <a href="academy.html" class="academy-link-btn">WALABI Academy</a>.</p>
+          </div>
+        </div>
+
+        <div class="booking-section">
+          <div class="booking-content" id="booking-content-en">
+            <h3>Ready to get started?</h3>
+            <p>Book a free 20-minute consult with the WALABI team.</p>
+            <a href="https://outlook.office.com/book/WalabiIntake@wageningenur4.onmicrosoft.com/s/rhyxgdQc5UuhMlm9A3z4kg2" target="_blank" class="booking-btn">Book a 20-min consult</a>
+          </div>
+          <div class="booking-content hidden" id="booking-content-nl">
+            <h3>Klaar om te beginnen?</h3>
+            <p>Plan een gratis consult van 20 minuten met team WALABI.</p>
+            <a href="https://outlook.office.com/book/WalabiIntake@wageningenur4.onmicrosoft.com/s/rhyxgdQc5UuhMlm9A3z4kg2" target="_blank" class="booking-btn">Plan een consult</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="themes" id="themes-section">
+      <div class="container">
+        <h2 class="section-title" id="themes-title-en">Our Themes</h2>
+        <h2 class="section-title hidden" id="themes-title-nl">Onze Thema's</h2>
+
+        <div class="theme-grid">
+          <div class="theme-card" id="theme1">
+            <div class="theme-icon"><i class="fas fa-building"></i></div>
+            <h3 id="theme1-title-en">Business Architecture</h3>
+            <h3 class="hidden" id="theme1-title-nl">Bedrijfsarchitectuur</h3>
+            <p id="theme1-text-en">Target architecture, roadmap, and risk & dependency register to reduce complexity and speed delivery.</p>
+            <p class="hidden" id="theme1-text-nl">Doelarchitectuur, routekaart en risico- & afhankelijkheidsregister voor minder complexiteit en snellere levering.</p>
+          </div>
+
+          <div class="theme-card" id="theme2">
+            <div class="theme-icon"><i class="fas fa-digital-tachograph"></i></div>
+            <h3 id="theme2-title-en">Digital Transformation</h3>
+            <h3 class="hidden" id="theme2-title-nl">Digitale Transformatie</h3>
+            <p id="theme2-text-en">Strategy to execution—visions, pilots, org change, and value tracking.</p>
+            <p class="hidden" id="theme2-text-nl">Van strategie tot uitvoering—visies, pilots, organisatieverandering en waarde-tracking.</p>
+          </div>
+
+          <div class="theme-card" id="theme3">
+            <div class="theme-icon"><i class="fas fa-binoculars"></i></div>
+            <h3 id="theme3-title-en">Digital Trends Exploration</h3>
+            <h3 class="hidden" id="theme3-title-nl">Verkenning Digitale Trends</h3>
+            <p id="theme3-text-en">Trend briefs, opportunity/risk matrices, prototypes, and action agendas.</p>
+            <p class="hidden" id="theme3-text-nl">Trendbriefs, kans/risicomatrices, prototypes en actieagenda’s.</p>
+          </div>
+
+          <div class="theme-card" id="theme4">
+            <div class="theme-icon"><i class="fas fa-network-wired"></i></div>
+            <h3 id="theme4-title-en">Interoperability & Data Sharing</h3>
+            <h3 class="hidden" id="theme4-title-nl">Interoperabiliteit & Data-uitwisseling</h3>
+            <p id="theme4-text-en">Semantic/organizational/technical/legal alignment for trusted collaboration & dataspace readiness.</p>
+            <p class="hidden" id="theme4-text-nl">Semantische/organisatorische/technische/juridische afstemming voor vertrouwen & dataspace-gereedheid.</p>
+          </div>
+
+          <div class="theme-card" id="theme5">
+            <div class="theme-icon"><i class="fas fa-database"></i></div>
+            <h3 id="theme5-title-en">Smart Business Information Systems</h3>
+            <h3 class="hidden" id="theme5-title-nl">Slimme Bedrijfsinformatiesystemen</h3>
+            <p id="theme5-text-en">System maps, reference architectures, and analytics (descriptive→prescriptive→generative).</p>
+            <p class="hidden" id="theme5-text-nl">Systeemkaarten, referentie-architecturen en analytics (beschrijvend→prescriptief→generatief).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services-section">
+      <div class="container">
+        <h2 class="section-title" id="services-title-en">Our Services</h2>
+        <h2 class="section-title hidden" id="services-title-nl">Onze Diensten</h2>
+
+        <div class="services-grid" id="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="service-content">
+              <h3 id="service1-title-en">Digital Maturity Assessment</h3>
+              <h3 class="hidden" id="service1-title-nl">Digitale Volwassenheidstesten</h3>
+              <p id="service1-desc-en">Score capabilities across org & digital dimensions and get a prioritized next-step plan.</p>
+              <p class="hidden" id="service1-desc-nl">Scoor capaciteiten over org- & digitale dimensies en ontvang een geprioriteerd stappenplan.</p>
+
+              <div class="service-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📌</span>
+                  <div class="detail-content">
+                    <strong id="service1-for-en">For whom:</strong>
+                    <strong class="hidden" id="service1-for-nl">Voor wie:</strong>
+                    <span id="service1-for-text-en">Organizations assessing their own or clients’ readiness.</span>
+                    <span class="hidden" id="service1-for-text-nl">Organisaties die hun eigen of klanten-gereedheid willen meten.</span>
+                  </div>
                 </div>
+                <div class="detail-item">
+                  <span class="detail-icon">📧</span>
+                  <div class="detail-content">
+                    <strong id="service1-contact-en">Contact person:</strong>
+                    <strong class="hidden" id="service1-contact-nl">Contactpersoon:</strong>
+                    <span>Joep Tummers (WUR) – <a href="mailto:joep.tummers@wur.nl">joep.tummers@wur.nl</a></span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-    </main>
-    
-    <!-- Footer will be loaded here -->
-    <div id="footer-container"></div>
-    
-    <script src="./script.js"></script>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-users"></i></div>
+            <div class="service-content">
+              <h3 id="service2-title-en">User Acceptance Testing</h3>
+              <h3 class="hidden" id="service2-title-nl">Gebruikersacceptatietesten</h3>
+              <p id="service2-desc-en">Map acceptance, concerns, and adoption readiness via surveys/interviews—report with clear actions.</p>
+              <p class="hidden" id="service2-desc-nl">Breng acceptatie, zorgen en adoptie­bereidheid in kaart—met duidelijke acties in het rapport.</p>
+
+              <div class="service-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📌</span>
+                  <div class="detail-content">
+                    <strong id="service2-for-en">For whom:</strong>
+                    <strong class="hidden" id="service2-for-nl">Voor wie:</strong>
+                    <span id="service2-for-text-en">Use cases aligning with end-user expectations.</span>
+                    <span class="hidden" id="service2-for-text-nl">Use-cases die aansluiten bij eindgebruikersverwachtingen.</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">📧</span>
+                  <div class="detail-content">
+                    <strong id="service2-contact-en">Contact person:</strong>
+                    <strong class="hidden" id="service2-contact-nl">Contactpersoon:</strong>
+                    <span>Joep Tummers (WUR) – <a href="mailto:joep.tummers@wur.nl">joep.tummers@wur.nl</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="service-content">
+              <h3 id="service3-title-en">Interoperability Testing</h3>
+              <h3 class="hidden" id="service3-title-nl">Interoperabiliteitstesten</h3>
+              <p id="service3-desc-en">Assess standards alignment and provide concrete improvements for system-to-system collaboration.</p>
+              <p class="hidden" id="service3-desc-nl">Beoordeel standaard-afstemming en ontvang concrete verbeteringen voor systeem-samenwerking.</p>
+
+              <div class="service-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📌</span>
+                  <div class="detail-content">
+                    <strong id="service3-for-en">For whom:</strong>
+                    <strong class="hidden" id="service3-for-nl">Voor wie:</strong>
+                    <span id="service3-for-text-en">Organizations improving data sharing or joining dataspaces.</span>
+                    <span class="hidden" id="service3-for-text-nl">Organisaties die data beter willen delen of willen aansluiten op dataspaces.</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">📧</span>
+                  <div class="detail-content">
+                    <strong id="service3-contact-en">Contact person:</strong>
+                    <strong class="hidden" id="service3-contact-nl">Contactpersoon:</strong>
+                    <span>Joep Tummers (WUR) – <a href="mailto:joep.tummers@wur.nl">joep.tummers@wur.nl</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+            <div class="service-content">
+              <h3 id="service4-title-en">Business Model Validation</h3>
+              <h3 class="hidden" id="service4-title-nl">Businessmodelvalidatie</h3>
+              <p id="service4-desc-en">Validate economic feasibility with TLBMC + expert interviews; get recommendations & visuals.</p>
+              <p class="hidden" id="service4-desc-nl">Toets haalbaarheid met TLBMC + experts; ontvang aanbevelingen & visuals.</p>
+
+              <div class="service-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📌</span>
+                  <div class="detail-content">
+                    <strong id="service4-for-en">For whom:</strong>
+                    <strong class="hidden" id="service4-for-nl">Voor wie:</strong>
+                    <span id="service4-for-text-en">Use cases refining revenue models or convincing investors.</span>
+                    <span class="hidden" id="service4-for-text-nl">Use-cases die het verdienmodel aanscherpen of investeerders willen overtuigen.</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">📧</span>
+                  <div class="detail-content">
+                    <strong id="service4-contact-en">Contact person:</strong>
+                    <strong class="hidden" id="service4-contact-nl">Contactpersoon:</strong>
+                    <span>Joep Tummers (WUR) – <a href="mailto:joep.tummers@wur.nl">joep.tummers@wur.nl</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- simple slider dots -->
+        <div class="services-navigation">
+          <button class="nav-btn prev-btn" id="services-prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <div class="services-dots" id="services-dots"></div>
+          <button class="nav-btn next-btn" id="services-next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="track-record" id="track-record-section">
+      <div class="container">
+        <h2 class="section-title" id="track-record-title-en">Track Record</h2>
+        <h2 class="section-title hidden" id="track-record-title-nl">Resultaten</h2>
+
+        <div class="track-record-content">
+          <p id="track-record-intro-en">We combine academic rigor with practical impact in EU and national projects, publishing in top venues while delivering tools that teams actually use.</p>
+          <p class="hidden" id="track-record-intro-nl">We combineren academische degelijkheid met praktische impact in EU- en nationale projecten, met publicaties én tools die teams echt gebruiken.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer will be loaded here -->
+  <div id="footer-container"></div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
